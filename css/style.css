@@ -79,6 +79,20 @@ nav {
     color: var(--neutral-color);
 }
 
+.hamburger .fa-bars {
+    font-size: 1.5rem;
+    color: var(--neutral-color); 
+    
+}
+
+.nav-links > li > a.blue {
+    color: var(--acent-color) !important;
+    font-weight: 600;
+}
+
+
+
+
 
 
 
@@ -100,9 +114,11 @@ nav {
     transition: var(--transition-value);
    }
 
-   /* Se puede hacer desde cualquier lado: top, bottom, right, left */
-
-   /* Este selector está esperando a que yo con js se lo ponga al ul */
+   .nav-links > li > a {
+    font-size: 2rem;
+    font-weight: 500;
+  
+}
 
    .nav-links.active {
     right: 0;
@@ -115,5 +131,16 @@ nav {
    .hamburger {
     display: block;
    }
+
+    .logo {
+    font-size: 1rem;
+    }
+
+    .nav-links > li > a.blue {
+    color: var(--neutral-color) !important;
+    font-weight: 500;
+}
+
+
 
 }
