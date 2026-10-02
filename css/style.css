@@ -1,0 +1,119 @@
+:root {
+    --acent-color: #082B74; 
+    --light-color: #EFECE6; 
+    --dark-color: #18181B; 
+    --neutral-color: #9F9990; 
+    --transition-value: all 0.3s ease; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* <!-- FUENTES --> */
+
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+/* MENU DE NAVEGACIÓN  */
+
+nav {
+    background-color: var(--light-color);
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links > li {
+    margin-left: 2rem;
+}
+
+.nav-links > li > a {
+    color: var(--neutral-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: var(--transition-value);
+    font-family: Montserrat;
+}
+
+.nav-links > li > a:hover {
+    color: var(--acent-color);
+    font-weight: 600;
+    
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.logo {
+    font-family: Boldonse;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--neutral-color);
+}
+
+
+
+
+
+/* MEDIA QUERYS  */
+
+@media screen and (max-width: 960px) {
+    
+   .nav-links {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--pr-color);
+    right: -100%;
+    transition: var(--transition-value);
+   }
+
+   /* Se puede hacer desde cualquier lado: top, bottom, right, left */
+
+   /* Este selector está esperando a que yo con js se lo ponga al ul */
+
+   .nav-links.active {
+    right: 0;
+   }
+
+   .nav-links > li {
+    margin: 1.5rem 0;
+   }
+
+   .hamburger {
+    display: block;
+   }
+
+}
