@@ -98,7 +98,8 @@ header {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap-reverse;
-    margin: 2rem 0;
+    padding: 2rem 0;
+    height: calc(100vh -70px);
 }
 
 .hero-img {
@@ -176,6 +177,10 @@ header {
     color: var(--dark-color);
     margin: 0;
 }
+
+
+
+
 
 /* BOTONES HERO */
 .hero-buttons {
