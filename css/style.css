@@ -99,6 +99,8 @@ nav {
     font-weight: 600;
 }
 
+/* ---------MENÚ--------- */
+
 /* HERO  */
 
 header {
@@ -613,34 +615,26 @@ footer {
     transform: scale(1.1);
 }
 
-/* ==========================================
-   ADAPTACIÓN RESPONSIVE (WRAP Y MÓVIL)
-   ========================================== */
+/* --------PROGRAMA-------- */
 
-/* Cuando los elementos se envuelven (pantallas medianas/tablets) */
-/* @media (max-width: 1024px) {
-    footer {
-        min-height: auto;
-        padding: 4rem 3rem;
-    }
+/* HERO PROGRAM  */
 
-    .logo-footer img {
-        height: 220px;
-    }
-
-    .final-colum-footer {
-        align-items: center;
-        text-align: center;
-        height: auto;
-        gap: 2rem;
-    }
-} */
+.intro-program {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
 
 
 
 
 
-/* MEDIA QUERYS  */
+
+
+
+
+/* --------MEDIA QUERYS----------  */
 
 /* TABLET  */
 
