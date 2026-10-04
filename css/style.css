@@ -696,165 +696,350 @@ footer {
 
 /* -------ABONOS C-41------- */
 
-.abonos-container {
+.full-width-wrapper {
   width: 100%;
-  box-sizing: border-box;
+  padding: 30px 0;
+   margin-bottom: 6rem;
 }
 
-.abonos-header {
+/* Main Title */
+.main-title {
+  font-size: 3.5rem;
+  font-family: Boldonse;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Info Bar Section */
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 2px solid var(--neutral-color);
+  border-bottom: 2px solid var(--neutral-color);
+  padding: 18px 0 22px 0;
+  margin-bottom: 35px;
+  width: 100%;
+  gap: 20px;
+}
+
+.info-label {
+  font-size: 1rem;
+  font-family: Montserrat;
+  color: var(--neutral-color);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 2rem;
+  font-family: Boldonse;
+  color: var(--acent-color);
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+
+.info-sub {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--neutral-color);
+  font-family: Montserrat;
+  margin-top: 4px;
+}
+
+.dates-col {
+  text-align: right;
+  align-self: center;
+}
+
+.dates-value {
+  font-size: 2.2rem;
+}
+
+/* Main Form Grid Layout - Ocupa todo el ancho */
+.form-layout {
+  display: flex;
+  width: 100%;
+  gap: 80px;
+}
+
+.layout-left,
+.layout-right {
+  flex: 1;
+}
+
+/* Ticket Box */
+.ticket-box {
+  border: 2px solid var(--neutral-color);
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.ticket-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 6px;
+}
+
+.ticket-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--acent-color);
+  font-family: Boldonse;
+}
+
+.ticket-price {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--acent-color);
+  font-family: Boldonse;
+}
+
+.ticket-desc {
+  font-size: 0.9rem;
+  color: var(--neutral-color);
+  font-family: Montserrat;
+}
+
+/* Quantity controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-qty {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--neutral-color);
+  color: var(--light-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.btn-qty:hover {
+  background-color: var(--acent-color);
+}
+
+.qty-number {
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 15px;
+  text-align: center;
+  color: #000000;
+}
+
+/* Buyer Form Fields */
+.form-section-title {
+  font-size: 1.2rem;
+  font-family: Montserrat;
+  font-weight: 700;
+  color: var(--acent-color);
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 15px;
+  border: 2px solid var(--neutral-color);
+  background-color: var(--light-color);
+  font-size: 1rem;
+  color: var(--neutral-color);
+  outline: none;
+}
+
+
+/* Right Column Order Summary */
+.order-summary {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+  color: var(--dark-color);
+  padding-bottom: 12px;
+}
+
+.line-dashed {
+  border-bottom: 2px dashed var(--dark-color);
+  margin-bottom: 15px;
+}
+
+.total-line {
+  align-items: flex-start;
+  padding-bottom: 0;
+}
+
+.total-label {
+  font-weight: 800;
+  font-family: Montserrat;
+  font-size: 1.15rem;
+  display: block;
+}
+
+.total-sub {
+  font-size: 0.75rem;
+  color: var(--neutral-color);
+  display: block;
+  margin-top: 2px;
+}
+
+.total-price {
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+/* Dividers */
+.divider-dashed {
+  border-bottom: 2px dashed var(--dark-color);
+  margin: 20px 0;
+  width: 100%;
+}
+
+.divider-solid {
+  border-bottom: 2px solid var(--dark-color);
+  margin: 25px 0;
+  width: 100%;
+}
+
+/* Discount Code Section */
+.discount-box {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.discount-box input {
+  flex: 1;
+  padding: 14px 15px;
+  border: 2px solid var(--neutral-color);
+  background-color: var(--light-color);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+
+.btn-apply {
+  background-color: var(--neutral-color);
+  color: var(--light-color);
+  border: none;
+  padding: 0 30px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.btn-apply:hover {
+  background-color: var(--acent-color);
+}
+
+/* Custom Checkboxes */
+.checkbox-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-
-}
-
-.abonos-header h2 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  font-family: Boldonse;
-  white-space: nowrap;
-  color: var(--dark-color);
-}
-
-.abonos-header p {
-  font-size: 1.1rem;
-  font-family: Montserrat;
-  color: var(--dark-color);
-}
-
-.abonos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px;
   margin-bottom: 25px;
   width: 100%;
 }
 
-.grid-2 > .ticket-card {
-  flex: 1 1 calc(50% - 10px);
-  min-width: 320px;
-}
-
-.grid-3 > .ticket-card {
-  flex: 1 1 calc(33.333% - 14px);
-  min-width: 280px;
-}
-
-.ticket-card {
-  background-color: var(--acent-color);
-  color: var(--light-color);
-  border-radius: 16px;
-  padding: 28px;
+.custom-checkbox {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
 }
 
-.ticket-card .card-header {
-  margin-bottom: 16px;
-}
-
-.ticket-card .meta {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-  font-family: Montserrat;
-  color: var(--neutral-color);
-}
-
-.ticket-card .title-price {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  font-family: Boldonse;
-}
-
-.ticket-card .title-price h3 {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-
-.ticket-card .title-price .price {
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.ticket-card .card-body .subtitle {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--neutral-color);
-  font-family: Montserrat;
-}
-
-.ticket-card .card-body .desc {
-  font-size: 1rem;
-  line-height: 1.35;
-  opacity: 0.9;
-  margin-bottom: 16px;
-  font-family: Montserrat;
-}
-
-.ticket-card .divider {
-  border: none;
-  border-top: 2px dashed var(--light-color);
-  margin-bottom: 16px;
-}
-
-.ticket-card .includes-label {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  opacity: 0.8;
-  font-family: Montserrat;
-  color: var(--neutral-color);
-}
-
-.ticket-card .card-body ul {
-  list-style: none;
-  margin-bottom: 24px;
-}
-
-.ticket-card .card-body li {
-  font-size: 1rem;
-  line-height: 1.35;
-  margin-bottom: 4px;
-  position: relative;
-  padding-left: 12px;
-  opacity: 0.95;
-}
-
-.ticket-card .card-body li:before {
-  content: "•";
+.custom-checkbox input {
   position: absolute;
-  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
-.ticket-card .btn-buy {
-  display: block;
+.checkbox-box {
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--neutral-color);
+  border-radius: 10%;
+  margin-right: 12px;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.custom-checkbox input:checked ~ .checkbox-box {
+  background-color: var(--acent-color);
+  border-color: var(--acent-color);
+}
+
+.custom-checkbox input:checked ~ .checkbox-box::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--light-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.label-text {
+  font-size: 0.95rem;
+  color: var(--neutral-color);
+}
+
+/* Submit Button */
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
   width: 100%;
-  background-color: var(--light-color);
-  color: var(--acent-color);
-  text-align: center;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 12px 0;
-  border-radius: 20px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  letter-spacing: 0.2px;
 }
 
-.ticket-card .btn-buy:hover {
+.btn-continue {
   background-color: var(--neutral-color);
-  font-weight: 800;
+  color: var(--light-color);
+  border: none;
+  border-radius: 25px;
+  padding: 14px 45px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  width: 60%;
+  text-align: center;
 }
+
+.btn-continue:hover {
+  background-color: var(--acent-color);
+}
+
 
 
 
@@ -965,6 +1150,29 @@ footer {
     .grid-3 > .ticket-card {
         flex: 1 1 100%;
     }
+
+    .full-width-wrapper {
+    padding: 20px 15px;
+  }
+
+  .form-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dates-col {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .btn-continue {
+    width: 100%;
+  }
 
 
 
