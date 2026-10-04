@@ -696,6 +696,180 @@ footer {
 
 /* -------ABONOS C-41------- */
 
+/* Contenedor Principal (100% de ancho sin tope) */
+.abonos-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Encabezado en una sola fila (flexbox) */
+.abonos-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+
+}
+
+.abonos-header h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: Boldonse;
+  white-space: nowrap;
+  color: var(--dark-color);
+}
+
+.abonos-header p {
+  font-size: 1.1rem;
+  font-family: Montserrat;
+  color: var(--dark-color);
+}
+
+/* Grids Flexbox */
+.abonos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+/* Fila 1: 2 columnas iguales que ocupan todo el ancho disponible */
+.grid-2 > .ticket-card {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 320px;
+}
+
+/* Fila 2: 3 columnas iguales que ocupan todo el ancho disponible */
+.grid-3 > .ticket-card {
+  flex: 1 1 calc(33.333% - 14px);
+  min-width: 280px;
+}
+
+/* Estilo individual de las Tarjetas */
+.ticket-card {
+  background-color: var(--acent-color);
+  color: var(--light-color);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Header de la tarjeta */
+.ticket-card .card-header {
+  margin-bottom: 16px;
+}
+
+.ticket-card .meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-family: Montserrat;
+  color: var(--neutral-color);
+}
+
+.ticket-card .title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: Boldonse;
+}
+
+.ticket-card .title-price h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.ticket-card .title-price .price {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* Cuerpo de la tarjeta */
+.ticket-card .card-body .subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--neutral-color);
+  font-family: Montserrat;
+}
+
+.ticket-card .card-body .desc {
+  font-size: 1rem;
+  line-height: 1.35;
+  opacity: 0.9;
+  margin-bottom: 16px;
+  font-family: Montserrat;
+}
+
+.ticket-card .divider {
+  border: none;
+  border-top: 2px dashed var(--light-color);
+  margin-bottom: 16px;
+}
+
+.ticket-card .includes-label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  opacity: 0.8;
+  font-family: Montserrat;
+  color: var(--neutral-color);
+}
+
+.ticket-card .card-body ul {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.ticket-card .card-body li {
+  font-size: 1rem;
+  line-height: 1.35;
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 12px;
+  opacity: 0.95;
+}
+
+.ticket-card .card-body li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+/* Botón inferior */
+.ticket-card .btn-buy {
+  display: block;
+  width: 100%;
+  background-color: var(--light-color);
+  color: var(--acent-color);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 0;
+  border-radius: 20px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  letter-spacing: 0.2px;
+}
+
+.ticket-card .btn-buy:hover {
+  background-color: var(--neutral-color);
+  font-weight: 800;
+}
+
+
+
+
+/* --------FORM--------- */
+
 .full-width-wrapper {
   width: 100%;
   padding: 30px 0;
