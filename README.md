@@ -18,3 +18,10 @@
 
 <!-- VERSIÓN JS -->
 java script ES5
+
+
+<!-- FALTA  -->
+
+- REVISAR MEDIA QUERYS FOOTER TABLET
+- MEDIA QUERYS MOBILE (atención: tamaños de letras y fotos)
+- Ordenar y limpair código.
