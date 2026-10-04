@@ -17,6 +17,7 @@ body{
     color: var(--dark-color);
     font-family: Montserrat;
     margin: 0px 40px 0px 40px;
+    overflow-x: hidden;
 }
 
 /* <!-- FUENTES --> */
@@ -41,11 +42,14 @@ nav {
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0rem;
+    padding: 1rem 40px;
     height: 70px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px); 
 }
 
 .nav-links {
@@ -340,13 +344,12 @@ header {
 /* SEPARADOR CARRUSEL  */
 
 .carrusel-container {
-  padding: 10vh 0;
+  padding: 20vh 0;
   overflow: hidden;
   margin-left: -40px;
   margin-right: -40px;
   width: calc(100% + 80px); 
-  overflow: hidden;
-  background-color: #f3efe6;
+  background-color: var(--light-color);
 }
 
 .carrusel-track {
@@ -364,6 +367,11 @@ header {
   display: flex;
   flex-direction: column;
   flex-shrink: 0; 
+  transition: var(--transition-value);
+}
+
+.carrusel-item:hover {
+    scale: 1.2;
 }
 
 .carrusel-item img {
@@ -376,7 +384,7 @@ header {
 .carrusel-item span {
   font-family: sans-serif;
   font-size: 0.85rem;
-  color: #333;
+  color: var(--neutral-color);
   margin-top: 8px;
 }
 
@@ -389,14 +397,252 @@ header {
   }
 }
 
+/* ACORDEÓN ENTIDADES COLABORADORAS  */
+
+.colaboradores-section {
+  padding: 40px 20px;
+  font-family: sans-serif;
+  color: var(--acent-color);
+  padding-right: 10vw;
+}
+
+.colaboradores-section h2 {
+  font-size: 3rem;
+  color: var(--acent-color);
+  margin-bottom: 3rem;
+  font-weight: 800;
+  font-family: Boldonse;
+}
 
 
+.acordeon {
+  border-top: 2px solid var(--neutral-color);
+}
+
+.acordeon-item {
+  border-bottom: 2px solid var(--neutral-color);
+}
+
+.acordeon-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+.acordeon-titulo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--neutral-color);
+  transition: color 0.3s ease;
+  font-family: Boldonse;
+}
+
+.acordeon-flecha {
+  width: 16px;
+  height: 16px;
+  border-right: 4px solid var(--acent-color);
+  border-bottom: 4px solid var(--acent-color);
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-right: 10px;
+}
+
+.acordeon-item.active .acordeon-titulo {
+  color: var(--acent-color);
+}
+
+.acordeon-item.active .acordeon-flecha {
+  transform: rotate(-135deg);
+}
+
+.acordeon-contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.acordeon-body {
+  padding-bottom: 24px;
+}
+
+.acordeon-body p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--dark-color);
+  margin: 0 0 20px 0;
+  max-width: 800px;
+}
+
+.acordeon-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.acordeon-footer > span {
+    font-family: Montserrat;
+    font-size: 1rem;
+}
+
+.acordeon-direccion {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.btn-web {
+  display: inline-block;
+  background-color: var(--neutral-color);
+  color: var(--light-color);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-web:hover {
+  background-color: var(--acent-color);
+}
+
+
+/* FOOTER  */
+
+footer {
+    background-color: var(--acent-color); 
+    color: var(--light-color);
+    min-height: 50vh;
+    padding: 3rem 5%;
+    box-sizing: border-box;
+    margin: 0 -40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    font-family: 'Arial Narrow', 'Helvetica Neue', sans-serif;
+}
+
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    flex: 1 1 300px;
+}
+
+.logo-footer img {
+    min-height: 220px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    max-width: 400px;
+}
+
+.enlaces-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.8rem;
+    flex: 1 1 220px;
+}
+
+.enlaces-footer a {
+    color: var(--light-color);
+    font-family: Montserrat;
+    text-decoration: none;
+    font-size: 1.5rem; 
+    font-weight: 400;
+    transition: opacity 0.2s ease;
+}
+
+.enlaces-footer a:hover {
+    color: var(--neutral-color);
+}
+
+.final-colum-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 38vh;
+    min-height: 220px;
+    text-align: right;
+    flex: 1 1 320px;
+}
+
+.fecha-footer h2 {
+    margin: 0;
+    font-size: 1.5rem; 
+    font-weight: 900;
+    font-family: Boldonse;
+}
+
+.fecha-footer p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.95;
+    font-family: Montserrat;
+}
+
+
+.media-footer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.media-footer a img {
+    width: 36px; 
+    height: 36px;
+    object-fit: contain;
+
+}
+
+.media-footer a img:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   ADAPTACIÓN RESPONSIVE (WRAP Y MÓVIL)
+   ========================================== */
+
+/* Cuando los elementos se envuelven (pantallas medianas/tablets) */
+/* @media (max-width: 1024px) {
+    footer {
+        min-height: auto;
+        padding: 4rem 3rem;
+    }
+
+    .logo-footer img {
+        height: 220px;
+    }
+
+    .final-colum-footer {
+        align-items: center;
+        text-align: center;
+        height: auto;
+        gap: 2rem;
+    }
+} */
 
 
 
 
 
 /* MEDIA QUERYS  */
+
+/* TABLET  */
 
 @media screen and (max-width: 960px) {
     
@@ -473,6 +719,55 @@ header {
         font-size: 2rem;
     }
 
+     footer {
+        min-height: auto;
+        padding: 4rem 3rem;
+    }
+
+    .logo-footer img {
+        height: 220px;
+    }
+
+    .final-colum-footer {
+        align-items: center;
+        text-align: center;
+        height: auto;
+        gap: 2rem;
+    }
 
 
+
+}
+
+/* MÓVIL  */
+
+@media (max-width: 650px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .enlaces-footer a {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .fecha-footer h2 {
+        font-size: 1.5rem;
+    }
+
+    .fecha-footer p {
+        font-size: 1.2rem;
+    }
+
+    .media-footer a img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .final-colum-footer {
+        gap: 2rem;
+        justify-content: center;
+    }
 }
