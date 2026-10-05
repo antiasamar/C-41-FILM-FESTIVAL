@@ -19,6 +19,7 @@
     btnRejectCookies.addEventListener('click', closeCookieModal);
   }
 
+
 // MENU DE NAVEGACIÓN 
 const hamburger = document.querySelector(".hamburger"); 
 const navLinks = document.querySelector (".nav-links")
@@ -135,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    alert('¡Formulario enviado con éxito!\nTotal a pagar: ' + (pricePerUnit * currentQuantity) + '€');
+    alert('¡Formulario enviado con éxito! Total a pagar: ' + (pricePerUnit * currentQuantity) + '€');
   });
 });
 
