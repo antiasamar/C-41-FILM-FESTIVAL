@@ -1249,6 +1249,7 @@ footer {
 
     header {
         gap: 0;
+        flex-direction: column-reverse;
     }
 
     .hero-fest {
