@@ -34,6 +34,86 @@ body{
   font-style: normal;
 }
 
+/* ---COOKIES--- */
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: var(--light-color);
+  border: 1px solid var(--acent-color);
+  padding: 30px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: Boldonse;
+  color: var(--acent-color);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.modal-text {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  font-family: Montserrat;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-modal {
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: 2px solid var(--acent-color);
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+.btn-reject {
+  background-color: transparent;
+  color: var(--acent-color);
+}
+
+.btn-reject:hover {
+  background-color: var(--neutral-color);
+}
+
+.btn-accept {
+  background-color: var(--acent-color);
+  color: var(--light-color);
+}
+
+.btn-accept:hover {
+  background-color: var(--dark-color);
+}
+
+
 
 /* MENU DE NAVEGACIÓN  */
 
@@ -1202,6 +1282,13 @@ footer {
 /* TABLET  */
 
 @media screen and (max-width: 960px) {
+
+   .modal-buttons {
+    flex-direction: column;
+  }
+  .btn-modal {
+    width: 100%;
+  }
     
    .nav-links {
     position: fixed;

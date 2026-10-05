@@ -1,3 +1,24 @@
+// COOKIES
+  var cookieModal = document.getElementById('cookie-modal');
+  var btnAcceptCookies = document.getElementById('btn-accept-cookies');
+  var btnRejectCookies = document.getElementById('btn-reject-cookies');
+
+  function closeCookieModal() {
+    if (cookieModal) {
+      cookieModal.style.display = 'none';
+      // Restablece el scroll en el body al cerrar la modal
+      document.body.className = document.body.className.replace(/\bmodal-open\b/g, '').trim();
+    }
+  }
+
+  if (btnAcceptCookies) {
+    btnAcceptCookies.addEventListener('click', closeCookieModal);
+  }
+
+  if (btnRejectCookies) {
+    btnRejectCookies.addEventListener('click', closeCookieModal);
+  }
+
 // MENU DE NAVEGACIÓN 
 const hamburger = document.querySelector(".hamburger"); 
 const navLinks = document.querySelector (".nav-links")

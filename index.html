@@ -25,7 +25,21 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 
-    <body>
+    <body class="modal-open">
+
+        <!-- COOKIES -->
+        <div class="modal-overlay" id="cookie-modal">
+            <div class="modal-content">
+            <h3 class="modal-title">Uso de Cookies</h3>
+            <p class="modal-text">
+                Utilizamos cookies propias y de terceros para ofrecerte una mejor experiencia y analizar el tráfico de la web. Puedes aceptarlas todas o continuar con las esenciales.
+            </p>
+            <div class="modal-buttons">
+                <button type="button" class="btn-modal btn-reject" id="btn-reject-cookies">RECHAZAR</button>
+                <button type="button" class="btn-modal btn-accept" id="btn-accept-cookies">ACEPTAR TODAS</button>
+            </div>
+            </div>
+        </div>
 
         <!-- MENÚ DE NAVEGACIÓN  -->
         <nav>
