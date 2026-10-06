@@ -68,9 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ==========================================
-  // 1. LÓGICA DE LA VENTANA MODAL DE COOKIES
-  // ==========================================
   var cookieModal = document.getElementById('cookie-modal');
   var btnAcceptCookies = document.getElementById('btn-accept-cookies');
   var btnRejectCookies = document.getElementById('btn-reject-cookies');
@@ -78,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function closeCookieModal() {
     if (cookieModal) {
       cookieModal.style.display = 'none';
-      // Desbloquea el scroll del body eliminando la clase 'modal-open'
       document.body.className = document.body.className.replace(/\bmodal-open\b/g, '').trim();
     }
   }
@@ -92,12 +88,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  // ==========================================
-  // 2. LÓGICA DEL FORMULARIO DE COMPRA
-  // ==========================================
   var pricePerUnit = 45;
   var currentQuantity = 1;
-  var maxQuantity = 6; // Límite máximo de entradas
+  var maxQuantity = 6; 
 
   var btnMinus = document.getElementById('btn-minus');
   var btnPlus = document.getElementById('btn-plus');
@@ -108,14 +101,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var btnSubmit = document.getElementById('btn-submit');
   var btnApplyDiscount = document.getElementById('btn-apply-discount');
 
-  // Elementos del formulario
+  
   var inputNombre = document.getElementById('nombre');
   var inputApellidos = document.getElementById('apellidos');
   var inputEmail = document.getElementById('email');
   var inputConfirmEmail = document.getElementById('confirm-email');
   var checkTerms = document.getElementById('check-terms');
 
-  // Actualiza los precios en pantalla
+  
   function updatePrices() {
     var total = pricePerUnit * currentQuantity;
     qtyCount.innerHTML = currentQuantity;
@@ -124,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
     totalPriceVal.innerHTML = total + '€';
   }
 
-  // Evento botón (-)
+  
   if (btnMinus) {
     btnMinus.addEventListener('click', function () {
       if (currentQuantity > 1) {
@@ -134,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Evento botón (+) con límite de máximo 6
+
   if (btnPlus) {
     btnPlus.addEventListener('click', function () {
       if (currentQuantity < maxQuantity) {
@@ -146,9 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ==========================================
-  // 3. VALIDACIÓN PARA ACTIVAR/DESACTIVAR EL BOTÓN
-  // ==========================================
+
   function validateForm() {
     var nombreVal = inputNombre ? inputNombre.value.trim() : '';
     var apellidosVal = inputApellidos ? inputApellidos.value.trim() : '';
@@ -156,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var confirmEmailVal = inputConfirmEmail ? inputConfirmEmail.value.trim() : '';
     var termsVal = checkTerms ? checkTerms.checked : false;
 
-    // Comprueba que todos los campos tengan texto, coincidan los emails y se acepten términos
+    
     var isNombreValid = nombreVal !== '';
     var isApellidosValid = apellidosVal !== '';
     var isEmailValid = emailVal !== '';
@@ -169,7 +160,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Escuchar eventos en cada campo para validar en tiempo real
   var formInputs = [inputNombre, inputApellidos, inputEmail, inputConfirmEmail];
   for (var i = 0; i < formInputs.length; i++) {
     if (formInputs[i]) {
@@ -181,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
     checkTerms.addEventListener('change', validateForm);
   }
 
-  // Evento Aplicar Descuento
   if (btnApplyDiscount) {
     btnApplyDiscount.addEventListener('click', function () {
       var discountInput = document.getElementById('discount-code');
@@ -194,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Accion al pulsar el boton cuando ya está activo
   if (btnSubmit) {
     btnSubmit.addEventListener('click', function () {
       if (!btnSubmit.disabled) {
