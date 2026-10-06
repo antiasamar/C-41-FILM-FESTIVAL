@@ -293,7 +293,7 @@ header {
 }
 
 .btn:hover {
-    background-color: #082B74;
+    background-color: var(--acent-color);
     font-weight: 600;
 }
 
@@ -327,7 +327,7 @@ header {
   background-color: var(--light-color);
   padding: 40px 40px;
   font-family: sans-serif;
-  color: #0b2b80;
+  color: var(--acent-color);
 }
 
 .actividades > h1 {
@@ -344,16 +344,15 @@ header {
   gap: 40px 30px;
 }
 
-
 .actividad-card {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   padding: 32px;
   background-color: transparent;
   color: var(--dark-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  cursor: pointer;
+  transition: var(--transition-value);
 }
 
 .actividad-card > div:first-child {
@@ -387,7 +386,7 @@ header {
 }
 
 .actividad-card h3 {
-    font-family: Boldonse;
+  font-family: Boldonse;
   font-size: 1.6rem;
   margin: 0 0 12px 0;
   font-weight: 700;
@@ -925,7 +924,7 @@ footer {
   font-size: 1rem;
   padding: 12px 0;
   border-radius: 20px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: var(--transition-value);
   letter-spacing: 0.2px;
 }
 
@@ -1079,7 +1078,7 @@ footer {
   font-size: 1rem;
   min-width: 15px;
   text-align: center;
-  color: #000000;
+  color: var(--dark-color);
 }
 
 .form-section-title {
@@ -1271,18 +1270,11 @@ footer {
   background-color: var(--acent-color);
 }
 
-/* Estado desactivado para el botón Continuar */
 .btn-continue:disabled {
   background-color: #a8a49e;
   cursor: not-allowed;
   opacity: 0.6;
 }
-
-
-
-
-
-
 
 /* --------MEDIA QUERYS----------  */
 
@@ -1350,9 +1342,6 @@ footer {
         gap: 1.5rem;
     }
 
-    
-   
-
     .actividades-grid {
     grid-template-columns: 1fr; 
     gap: 30px;
@@ -1378,8 +1367,6 @@ footer {
         height: auto;
         gap: 2rem;
     }
-
-
 
     .abonos-header {
         flex-direction: column;
@@ -1459,9 +1446,6 @@ footer {
       padding: 0;
     }
     
-
-
-
 }
 
 /* MÓVIL  */
