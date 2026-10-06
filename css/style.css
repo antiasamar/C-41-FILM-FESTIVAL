@@ -1271,6 +1271,13 @@ footer {
   background-color: var(--acent-color);
 }
 
+/* Estado desactivado para el botón Continuar */
+.btn-continue:disabled {
+  background-color: #a8a49e;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 
 
 

@@ -25,3 +25,8 @@ java script ES5
 - REVISAR MEDIA QUERYS FOOTER TABLET
 - MEDIA QUERYS MOBILE (atención: tamaños de letras y fotos)
 - Ordenar y limpair código.
+
+
+REVISAR: 
+- AÑADIR MÁXIMO DE 6 ENTRADAS
+- DESACTIVAR BOTÓN HASTA QUE SE RELLENEN TODOS LOS CAMPOS
