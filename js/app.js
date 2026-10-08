@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (navLinks.classList) {
         navLinks.classList.toggle("active");
       } else {
-        // Fallback ES5 puro para navegadores muy antiguos
+
         if (navLinks.className.indexOf('active') !== -1) {
           navLinks.className = navLinks.className.replace(' active', '');
         } else {
